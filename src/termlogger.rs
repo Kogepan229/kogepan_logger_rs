@@ -2,6 +2,7 @@ use colored::*;
 use log::{
     set_boxed_logger, set_max_level, Level, LevelFilter, Log, Metadata, Record, SetLoggerError,
 };
+use std::io::{stdout, Write};
 
 use crate::{get_current_time, Sharedlogger};
 
@@ -61,7 +62,9 @@ impl Log for TerminalLogger {
         }
     }
 
-    fn flush(&self) {}
+    fn flush(&self) {
+        stdout().flush().unwrap();
+    }
 }
 
 impl Sharedlogger for TerminalLogger {
