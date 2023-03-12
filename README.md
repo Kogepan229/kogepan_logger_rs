@@ -1,5 +1,6 @@
 # kogepan_logger_rs
-Rust logging crate for my applications
+Rust logging crate for my applications.
+Output logs to terminal and file.
 
 ## Getting Started
 ```
