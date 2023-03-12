@@ -3,6 +3,7 @@ use log::{LevelFilter, Log};
 
 pub mod kogepanlogger;
 pub mod termlogger;
+pub mod writelogger;
 
 trait Sharedlogger: Log {
     fn level(&self) -> LevelFilter;
